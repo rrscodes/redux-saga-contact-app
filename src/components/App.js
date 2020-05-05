@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getUsersRequest } from '../actions/users.action';
 
-function App() {
+function App({ getUsersRequest }) {
+	useEffect(() => {
+		getUsersRequest();
+	});
 	return (
 		<div>
 			<p>Test</p>
@@ -8,4 +13,4 @@ function App() {
 	);
 }
 
-export default App;
+export default connect(null, { getUsersRequest })(App);
