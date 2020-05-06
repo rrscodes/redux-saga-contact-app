@@ -1,7 +1,7 @@
 REDUX SAGA CONTACT WEBAPP
 
 Redux Saga Cheat Sheet
-Redux Saga Cheat Sheet
+
 Examples of when to use various Redux Saga keywords and techniques:
 
 "takeEvery"
@@ -57,8 +57,8 @@ function\* deleteUser({userId}){
 try{
 const result = yield call(api.deleteUser, userId);
 }catch(e){
-  
- }
+
+}
 }
 
 function\* watchDeleteUserRequest(){
@@ -82,6 +82,6 @@ yield put(actions.getUsersSuccess({
 users: result.data.users
 }));
 }catch(e){
-  
- }
+
+}
 }
